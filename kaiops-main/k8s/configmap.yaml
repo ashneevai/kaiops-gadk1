@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: kaiops-config
+  namespace: kaiops
+data:
+  KAFKA_BOOTSTRAP_SERVERS: kafka:9092
+  REDIS_URL: redis://redis:6379/0
+  CONTEXT_AGENT_URL: http://context-agent:8000
+  APPROVAL_SERVICE_URL: http://approval-service:8000
+  MONITORING_ADAPTER_URL: http://monitoring-adapter:8000
+  MODEL_ROUTER_URL: http://model-router:8000
+  API_GATEWAY_URL: http://api-gateway:8000
+  OPENAI_GPT5_MODEL: gpt-5
+  OPENAI_GPT4O_MODEL: gpt-4o
+  GEMINI_MODEL: gemini-2.0-flash
+  GROQ_MODEL: llama-3.3-70b-versatile
+  LOCAL_LLM_ENABLED: "false"
+  LLM_REQUEST_TIMEOUT_SECONDS: "120"
+  GATEWAY_REQUEST_TIMEOUT_SECONDS: "180"
+  KAFKA_ENABLED: "true"
+  DATABASE_ENABLED: "true"
